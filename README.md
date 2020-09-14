@@ -7,3 +7,13 @@ This is a repo to help my future self.
 - sh ~/.vim_runtime/install_awesome_vimrc.sh
 - vim ~/.vimrc
 - insert ```set number``` and ```set relativenumbe```
+### shell commands 
+ #### clipboard copy from commadn line
+ - ```sudo apt-get install xsel```
+ - pwd | xsel -b 
+ - xsel -b
+ 
+### Store git credentials permanently 
+- Do ```git config --global credential.helper store```
+- ```git clone``` or ```git pull``` any repo. This will add user name and password in ~/.gitcredential file
+-
