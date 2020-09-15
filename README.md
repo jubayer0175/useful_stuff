@@ -16,4 +16,8 @@ This is a repo to help my future self.
 ### Store git credentials permanently 
 - Do ```git config --global credential.helper store```
 - ```git clone``` or ```git pull``` any repo. This will add user name and password in ~/.gitcredential file
--
+
+
+### Vim commands
+- Copy paste: go to normal mode (Esc) and press V to select entire line or v to select a bunch of chars. y to yank (copy) c to cut. 
+- P to paste
