@@ -80,7 +80,12 @@ plt.savefig("../graph/a_1.pdf", transparent=True)
 
  ```
 
+ ### instll opencv in anaconda. 
 
+- ```conda create --name jubayer```
+- ```conda activate jubayer```
+- - ```conda install -c conda-forge opencv```
+-
 
 
 
