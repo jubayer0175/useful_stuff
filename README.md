@@ -17,6 +17,7 @@ This is a repo to help my future self.
 - Do ```git config --global credential.helper store```
 - ```git clone``` or ```git pull``` any repo. This will add user name and password in ~/.gitcredential file
 
+<<<<<<< HEAD
 ### SSH
 
 - sudo apt install openssh-server
@@ -33,8 +34,9 @@ This is a repo to help my future self.
 - 
 
 ### VIM commands
--- search and replace string ```%s/foo/bar/g``` this one changes your part of the string from foo to bar. This is case insesitive
-
+- search and replace string ```%s/foo/bar/g``` this one changes your part of the string from foo to bar. This is case insesitive
+- Copy paste: go to normal mode (Esc) and press V to select entire line or v to select a bunch of chars. y to yank (copy) c to cut. 
+- P to paste
 
 ### python
 - Plot help 
@@ -86,39 +88,4 @@ plt.savefig("../graph/a_1.pdf", transparent=True)
 - ```conda activate jubayer```
 - - ```conda install -c conda-forge opencv```
 -
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
