@@ -17,7 +17,12 @@ This is a repo to help my future self.
 - Do ```git config --global credential.helper store```
 - ```git clone``` or ```git pull``` any repo. This will add user name and password in ~/.gitcredential file
 
-<<<<<<< HEAD
+
+
+## Shell commands
+
+- nautilus . to open terminal in the current folder
+
 ### SSH
 
 - sudo apt install openssh-server
@@ -88,4 +93,9 @@ plt.savefig("../graph/a_1.pdf", transparent=True)
 - ```conda activate jubayer```
 - - ```conda install -c conda-forge opencv```
 -
+
+### Alias
+- alias lc="colorls"
+- alias folder="nautilus"
+- alias doc="cd ~/Documents"
 
