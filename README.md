@@ -1,5 +1,8 @@
 # Save my time
 This is a repo to help my future self.
+## Tar commands 
+- list files in tar archive ```tar -tr <filename.tar.gz>```
+- untar  ```tar -xf <filename.tar.gz>``` you want to extract it in another folder that is not you current folder use  ```tar -xf <filename.tar.gz> -C <directoy to export files to>```
 
 
 ## VIM setup
