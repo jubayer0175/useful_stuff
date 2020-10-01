@@ -38,9 +38,8 @@ This is a repo to help my future self.
 - sudo apt install zsh
 - chsh -s $(which zsh)
 - sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-- git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
-- source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
-- 
+- git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+- ```vim  ~/.zshrc``` insert plugins=(zsh-autosuggestions) . Source ~/.zshrc
 
 ### VIM commands
 - search and replace string ```%s/foo/bar/g``` this one changes your part of the string from foo to bar. This is case insesitive
