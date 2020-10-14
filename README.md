@@ -92,13 +92,24 @@ plt.savefig("../graph/a_1.pdf", transparent=True)
 
  ### instll opencv in anaconda. 
 
-- ```conda create --name jubayer```
-- ```conda activate jubayer```
-- - ```conda install -c conda-forge opencv```
--
+- ```Open the base terminal from the GUI or anyother way. source anaconda/bin/activate root should do it```
+- pip install opencv-python
+- pip install opencv-contrib-python
+- should work. If it does do a condat forge first
 
 ### Alias
 - alias lc="colorls"
 - alias folder="nautilus"
 - alias doc="cd ~/Documents"
 
+### Searching string (grep, awk, sed)
+- grep -r "string to search" ./*
+
+
+### MSP432 debugging:
+
+- Find the open openocd.cfg 
+- Run ```sudo openocd```
+- Run arm-none-ebai-gdb
+- type target remote:55000 in the gdb prompt
+- 
