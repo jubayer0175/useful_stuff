@@ -1,4 +1,4 @@
-# Save my time
+ Save my time
 This is a repo to help my future self.
 ## Tar commands 
 - list files in tar archive ```tar -tr <filename.tar.gz>```
@@ -135,7 +135,7 @@ plt.savefig("../graph/a_1.pdf", transparent=True)
 
 ### Upgrade python 
 - sudo apt-get install libreadline-gplv2-dev libncursesw5-dev libssl-dev libsqlite3-dev tk-dev libgdbm-dev libc6-dev libbz2-dev
-- Download the python you want and compile
+- Download the python you want and compilatione
 
 ### Searching in commandline
 
@@ -157,4 +157,113 @@ I have file named *.img genrated from compilation for rpi3. How do I see what is
 
 ## Copy SSH key to server
 - this allows password less entry to the remote machines
-- ssh-copy-id -i ~/.ssh/id_rsa.pub jubayer@172.30.0.214
+- ssh-copy-id -i ~/.ssh/id_rsa.pub jubayer@172.30.0.214i
+
+## USB enabling for UART comp such as Putty
+- sudo chown $USER /dev/ttyUSB0 && sudo chmod a+rw /dev/ttyUSB0
+
+### setup vim env
+
+- sudo apt-get update && sudo apt-get install -y \
+  curl \
+  git \
+  gnupg \
+  htop \
+  jq \
+  pass \
+  pwgen \
+  python3-pip \
+  ripgrep \
+  rsync \
+  shellcheck \
+  tmux \
+  unzip \
+  vim-gtk
+
+
+
+
+- mkdir -p ~/.local/bin && mkdir -p ~/.vim/spell \
+  && ln -fs ~/dotfiles/.aliases ~/.aliases \
+  && ln -fs ~/dotfiles/.bashrc ~/.bashrc \
+  && ln -fs ~/dotfiles/.gemrc ~/.gemrc \
+  && ln -fs ~/dotfiles/.gitconfig ~/.gitconfig \
+  && ln -fs ~/dotfiles/.profile ~/.profile \
+  && ln -fs ~/dotfiles/.tmux.conf ~/.tmux.conf \
+  && ln -fs ~/dotfiles/.vimrc ~/.vimrc \
+  && ln -fs ~/dotfiles/.vim/spell/en.utf-8.add ~/.vim/spell/en.utf-8.add \
+  && ln -fs ~/dotfiles/.local/bin/set-theme ~/.local/bin/set-theme 
+-  curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
+ - git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf && ~/.fzf/install
+ - vim .
+:PlugInstall
+
+### Bibliography for website
+- https://app.bibguru.com/p/88d86fb2-9169-4a1a-ab1d-8bc07bed5613
+### Find which processor is executing the a process in linux
+- ps -o pid,psr,comm -p <pid> 
+
+### GDB
+- Nice dash board: https://github.com/cyrus-and/gdb-dashboard
+### Little endian in ARM
+- Instructions (openOcd or dump file) ---------------> little endian (.bin file)
+
+31d071c0						c071d031 [read ledt to write]
+
+#### delete a char from text file 
+- tr -d '\n' < text.txt
+
+
+### Running a task in one particular CPU
+- taskset 0x8 ./c_app   --> runs cpu in the 4th core..> this is bitmask
+
+#### Subfigures and caption
+- Subcaption pakage is the ultimate new pakage.
+\begin{figure*}
+ \centering
+ \begin{subfigure}{0.32\textwidth}
+  \centering
+  \includegraphics[scale = 0.35]{fig/dist_3.pdf}
+    \caption{}
+    \label{fig:zero_aged}
+        
+
+\end{subfigure}
+\begin{subfigure}{0.32\textwidth}
+  \centering
+   \includegraphics[scale = 0.35]{fig/dist_2.pdf}
+  \caption{}
+       \label{fig:one_aged}
+
+\end{subfigure}
+\begin{subfigure}{0.32\textwidth}
+  \centering
+   \includegraphics[scale = 0.35]{fig/volatge_effect.pdf}
+    \caption{}
+      \label{fig:temp}
+\end{subfigure}
+\vspace{-0.32cm}
+\caption{ Illustrates data directed aging \textbf{(a)}  when an SRAM holds logic 0 , \textbf{(b)} logic 1 during stress. (c) Illustrates accelerated aging using supply voltage and operating temperature. }
+\label{fig:distr_}
+\vspace{-0.20cm}
+    \hrulefill
+\end{figure*}
+
+- subfig can also be used but this is depricated. 
+
+  \begin{figure}
+\centering
+    \subfloat[\label{fig:system_schem}]{\includegraphics[width = 0.45\columnwidth]{fig/system_for_steg.pdf}} 
+    \subfloat[\label{fig:system_schem_circuit}]{\includegraphics[width = 0.45\columnwidth]{fig/IMG_4147-min.jpg}}
+    \caption{\textbf{(a)}  Schematic diagram of the evaluation setup. \textbf{(b)} Evaluation platform. The red board is an MSP432P401 launchpad and the green board is our custom control board.}
+\label{system_subfigs}
+\end{figure}
+
+
+
+
+
+
+
