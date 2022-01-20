@@ -1,4 +1,4 @@
-### This page contents  tons of commands, scripts, code snippets and notes that I found useful at some point in my PhD. It is kind of note to myself that saved (and will save) a lot of web searching. 
+### This page contains  tons of commands, scripts, code snippets and notes that I found useful at some point in my PhD. It is kind of a note to myself that saved (and will save) a lot of web searching. 
 
 
 ## Tar commands 
