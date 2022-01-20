@@ -63,7 +63,7 @@ matplotlib.rc('font', **font)
 - Most complex syntax of python I wrote: a = [preaged[i] if (preaged - postaged)[i] == 0 else  (1- preaged[i]) for i in range(len(preaged))]
 - Here this one checks takes the subtraction of (preaged - postaged) then checks if every elemebts if preaged and post aged are the same. if same it replaces with the preaged[i] or it replaces with ~preaged[i]
 - string ''746869736973617365637265746b6579' to ascii conversion: bytearray.fromhex('746869736973617365637265746b6579').decode() ---> thisisasecretkey'
-
+- convert tring to hex in python: 'abcdefg'.encode('ascii').hex()  ; this one converts the string to byte like object then the we have hex() to filter that out.
 # black box arround the plot 
 
 ax.spines['left'].set_visible(True)
@@ -263,7 +263,11 @@ I have file named *.img genrated from compilation for rpi3. How do I see what is
 
 
 
+### Vector image coversion. 
 
+- installing coverters: sudo apt install ghostscript pdf2svg
+-  ps2pdf test.eps
+- pdf2svg test.pdf foo.svg
 
-
+import that to the power point an be happy.
 
