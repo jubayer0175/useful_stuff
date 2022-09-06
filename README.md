@@ -1,31 +1,40 @@
 This is a repo to help my future self.
 
-## Tar commands 
-- list files in tar archive ```tar -tr <filename.tar.gz>```
-- untar  ```tar -xf <filename.tar.gz>``` you want to extract it in another folder that is not you current folder use  ```tar -xf <filename.tar.gz> -C <directoy to export files to>``` 
-- tar a file ```tar -cf <archive name.tar.gz>  <list of files you want to archive>```
 
+### VIM setup
 
-## VIM setup
 - git clone --depth=1 https://github.com/amix/vimrc.git ~/.vim_runtime
 - sh ~/.vim_runtime/install_awesome_vimrc.sh
 - vim ~/.vimrc
 - insert ```set number``` and ```set relativenumbe```
-### shell commands 
- #### clipboard copy from commadn line
- - ```sudo apt-get install xsel```
- - pwd | xsel -b 
- - xsel -b
+
+
+
  
 ### Store git credentials permanently 
 - Do ```git config --global credential.helper store```
 - ```git clone``` or ```git pull``` any repo. This will add user name and password in ~/.gitcredential file
 
 
-
-## Shell commands
+### Shell commands
 
 - nautilus . to open terminal in the current folder
+ 
+ ####  clipboard copy from commadn line 
+ 
+ - ```sudo apt-get install xsel```
+ - pwd | xsel -b 
+ - xsel -b
+
+
+
+ ### Tar commands
+
+- list files in tar archive ```tar -tr <filename.tar.gz>```
+- untar  ```tar -xf <filename.tar.gz>``` you want to extract it in another folder that is not you current folder use  ```tar -xf <filename.tar.gz> -C <directoy to export files to>``` 
+- tar a file ```tar -cf <archive name.tar.gz>  <list of files you want to archive>```
+
+
 
 ### SSH
 
@@ -46,7 +55,9 @@ This is a repo to help my future self.
 - Copy paste: go to normal mode (Esc) and press V to select entire line or v to select a bunch of chars. y to yank (copy) c to cut. 
 - P to paste
 - shift +A goes to end of line and becomes in appen mode
-### python
+
+
+### Python
 - Plot help 
 
 ```python
@@ -89,12 +100,9 @@ ax.yaxis.tick_left()
 ax.xaxis.tick_bottom()
 
 plt.savefig("../graph/a_1.pdf", transparent=True)
-
-
-
  ```
 
- ### instll opencv in anaconda. 
+ ### Instll opencv in anaconda. 
 
 - ```Open the base terminal from the GUI or anyother way. source anaconda/bin/activate root should do it```
 - pip install opencv-python
@@ -105,10 +113,12 @@ plt.savefig("../graph/a_1.pdf", transparent=True)
 - alias lc="colorls"
 - alias folder="nautilus"
 - alias doc="cd ~/Documents"
-### FindPiD
+
+### Find PID
 - '''pidof firefox''
 - pkill -f JLinkExe
-- '
+
+
 ### Searching string (grep, awk, sed)
 - grep -r "string to search" ./*
 - grep Design filename -> returns lines with 'Design' in the 'filename'
@@ -152,33 +162,19 @@ plt.savefig("../graph/a_1.pdf", transparent=True)
 I have file named *.img genrated from compilation for rpi3. How do I see what is inside? NO need for now. .list files give you pretty code understadning
 
 
-## tmux 
+### tmux 
 - set :set -g mouse on yto enable scrolling
 
-## Copy SSH key to server
-- this allows password less entry to the remote machines
-- ssh-copy-id -i ~/.ssh/id_rsa.pub jubayer@172.30.0.214i
+### Copy SSH key to server
+- This allows password less entry to the remote machines
+- ssh-copy-id -i ~/.ssh/id_rsa.pub jubayer@172.30.0.214   (if you think this is real ip, the you do not know me yet.)
 
-## USB enabling for UART comp such as Putty
+### USB enabling for UART comp such as Putty
 - sudo chown $USER /dev/ttyUSB0 && sudo chmod a+rw /dev/ttyUSB0
 
 ### setup vim env
 
-- sudo apt-get update && sudo apt-get install -y \
-  curl \
-  git \
-  gnupg \
-  htop \
-  jq \
-  pass \
-  pwgen \
-  python3-pip \
-  ripgrep \
-  rsync \
-  shellcheck \
-  tmux \
-  unzip \
-  vim-gtk
+- sudo apt-get update && sudo apt-get install -y curl git gnupg htop  jq  pass  pwgen  python3-pip  ripgrep  rsync  shellcheck  tmux   unzip vim-gtk
 
 
 
@@ -244,6 +240,6 @@ I have file named *.img genrated from compilation for rpi3. How do I see what is
 - rdmsr loads the value to the EDX:EAX registers or wrmsr writes these registers' values to the ECX register-indexed MSR.
 
 ### x86 system registers
-<span style="color:blue">some *blue* text</span>
+
 
 
