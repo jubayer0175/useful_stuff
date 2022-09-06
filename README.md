@@ -1,5 +1,5 @@
- Save my time
 This is a repo to help my future self.
+
 ## Tar commands 
 - list files in tar archive ```tar -tr <filename.tar.gz>```
 - untar  ```tar -xf <filename.tar.gz>``` you want to extract it in another folder that is not you current folder use  ```tar -xf <filename.tar.gz> -C <directoy to export files to>``` 
@@ -149,7 +149,7 @@ plt.savefig("../graph/a_1.pdf", transparent=True)
     return sum(list(map(lambda x : int(x), list(bin(new_key ^ key)[2:])))) # find the sum of ons.
 
 ### hex dumping an imgae file:
-I have file named *.img genrated from compilation for rpi3. How do I see what is inside? NO need for now. .list files give you pretty good understadning
+I have file named *.img genrated from compilation for rpi3. How do I see what is inside? NO need for now. .list files give you pretty code understadning
 
 
 ## tmux 
@@ -221,17 +221,29 @@ I have file named *.img genrated from compilation for rpi3. How do I see what is
 - sudo perf_4.9 record -e cpu-clock,faults ./first
 
 
-### Quemu
+### Qemu
 
 - sudo apt-get install qemu-system
 - check 'qemu-system-aarch64 -h' 
+- Creating virtual machines: 
+- 1. ``qemu-img create -f qcow2 ubuntu.qcow2 16G``
+``qemu-system-x86_64 \
+    -enable-kvm \
+    -m 2048 \
+    -nic user,model=virtio \
+    -drive file=ubuntu.qcow2,media=disk,if=virtio \
+    -cdrom name_of_the_distro_image.iso \``
 
-## Installing VMs in KVM
-sudo virt-install --name ubuntu-guest --os-variant ubuntu20.04 --vcpus 2 --ram 2048 --location http://ftp.ubuntu.com/ubuntu/dists/focal/main/installer-amd64/ --network bridge=virbr0, model=virtio --graphics none --extra-args='console=ttyS0,115200n8 serial'
 
--- Check if the harwdare supports KVM first ```kvm-ok```
--- virsh domrename centos8 nginx_centos8
--- Find ip from the host: virsh domifaddr <name of the machine> ; you can find the machines name: virsh list. 
--- Do not forget to select openssh server during installation or you will have serious trouble accessing the VM after installation.
--- delete the VM : virsh undefine <name of the VM> --remove-all-storage we have to make sure the system is turned off. If you do not care,just do virsh destroy guest1.
--- Some helpful comments https://base64.co.za/kvm-guest-hangs-at-escape-character-is-solved/
+
+### email inbox cleaning
+-- Label: inbox is: unread
+
+### x86 MSRs
+- MSR are identifiable with a 32-bit number. This value must be in the ECX to read or write a specific MSR; i.e. '''rdmsr''' or '''wrmsr'''. 
+- rdmsr loads the value to the EDX:EAX registers or wrmsr writes these registers' values to the ECX register-indexed MSR.
+
+### x86 system registers
+<span style="color:blue">some *blue* text</span>
+
+
