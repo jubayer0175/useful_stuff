@@ -247,7 +247,7 @@ I have file named *.img genrated from compilation for rpi3. How do I see what is
 
 ### Shell command enumerator
 explainshell.com will change your life if you just copy a complex shell command there. Look the picture:
-![shell](explainshell.jpg)
+![shell](./explainshell.png)
 
 
 
