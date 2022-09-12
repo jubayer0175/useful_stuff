@@ -25,6 +25,8 @@ This is a repo to help my future self.
  - ```sudo apt-get install xsel```
  - pwd | xsel -b 
  - xsel -b
+ - Hex to ASCII: echo -e "\x69"  or echo -e "\x69\x65"  [:confused: figure out why i need \x seperately. Will do it in the future.]   
+- Renaming all the files in a directory with sequential ordering. '''ls -v | cat -n | while read n f; do mv -n "$f" "$n.ext"; done'''
 
 
 
@@ -205,6 +207,7 @@ I have file named *.img genrated from compilation for rpi3. How do I see what is
 - Nice dash board: https://github.com/cyrus-and/gdb-dashboard
 ### Little endian in ARM
 - Instructions (openOcd or dump file) ---------------> little endian (.bin file)
+- load command files at the start of the GDB: '''gdb -x command_file_name''' or source command_file_name 
 
 31d071c0						c071d031 [read ledt to write]
 
@@ -238,8 +241,14 @@ I have file named *.img genrated from compilation for rpi3. How do I see what is
 ### x86 MSRs
 - MSR are identifiable with a 32-bit number. This value must be in the ECX to read or write a specific MSR; i.e. '''rdmsr''' or '''wrmsr'''. 
 - rdmsr loads the value to the EDX:EAX registers or wrmsr writes these registers' values to the ECX register-indexed MSR.
+- Architectural MSRs are pre-fixed with "IA32_" 
 
 ### x86 system registers
+
+### Shell command enumerator
+explainshell.com will change your life if you just copy a complex shell command there. Look the picture:
+![shell](explainshell.jpg)
+
 
 
 
