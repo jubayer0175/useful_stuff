@@ -1,4 +1,4 @@
-This is a repo to help my future self.
+This repo has bunch tools/command etc to get me started in many things. 
 
 
 ### VIM setup
@@ -27,6 +27,8 @@ This is a repo to help my future self.
  - xsel -b
  - Hex to ASCII: echo -e "\x69"  or echo -e "\x69\x65"  [:confused: figure out why i need \x seperately. Will do it in the future.]   
 - Renaming all the files in a directory with sequential ordering. '''ls -v | cat -n | while read n f; do mv -n "$f" "$n.ext"; done'''
+
+- Searching through a linux man: ``` man g++ | grep   -e  "-std"``` this will give you the lines with -std matched. -e is to let the grep know that "-x" or whatever is not an option, it in fact a pattern you are looking for.
 
 
 
@@ -122,6 +124,10 @@ plt.savefig("../graph/a_1.pdf", transparent=True)
 
 
 ### Searching string (grep, awk, sed)
+
+
+- get a few lines before and after (aka context) ``` grep -C 12 ``` this will print 12 lines before and after the matched. For example, you want L1  cache info of your system: 
+```sudo dmidecode | grep -i l1 -C 10```
 - grep -r "string to search" ./*
 - grep Design filename -> returns lines with 'Design' in the 'filename'
 
@@ -214,6 +220,8 @@ I have file named *.img genrated from compilation for rpi3. How do I see what is
 #### delete a char from text file 
 - tr -d '\n' < text.txt
 
+#### Device harwdare enumerator in Linux 
+- sudo dmidecode
 
 ### perf
 - sudo apt-get install linux-tools-common
@@ -250,5 +258,7 @@ explainshell.com will change your life if you just copy a complex shell command 
 ![shell](./explainshell.png)
 
 
-
+### VS code shortcut
+- ctrl+shift+L will select all occurence of some text.
+- Alt+ click will give you another cursor.
 
