@@ -1,5 +1,11 @@
 This repo has bunch tools/command etc to get me started in many things. 
 
+### System issues (Somthing that I learned the hard way)
+#### Deleted phython and now the ubunutu desktop is broken
+-- Go into ubuntu recovery mode: keep shift key untill you enter Grub menu during system boot. Then go to root shell which most likely is password protected so you gotta figure that you. 
+-- Then see if network is; ping google. Most likely network is not running so we need to get that started. 
+--  In the root shell type: ```ifconfig <interface> up```, here interface name is the ethernet port name. You can do wifi too if you have one. Then, ```dhclient <interface>```
+This should get you an ip and if you do ```apt-get install ubuntu-desktop```, most likely it will fix the damage done due to python purging.
 
 ### VIM setup
 
@@ -8,7 +14,8 @@ This repo has bunch tools/command etc to get me started in many things.
 - vim ~/.vimrc
 - insert ```set number``` and ```set relativenumbe```
 
-
+### Frequently used scripts
+- ```note.sh``` this one opens this note book and  let me edit this folder from anywhere in my workstation. These type of scripts are located in my $PATH and have exec permission. 
 
  
 ### Store git credentials permanently 
@@ -44,6 +51,8 @@ This repo has bunch tools/command etc to get me started in many things.
 
 - sudo apt install openssh-server
 - sudo systemctl status ssh
+- list ssh keys in you local computer: ```ls -al ~/.ssh/id_*.pub```
+- Transfer the key to remote machine:  ```ssh-copy-id user@ip-address```. from now on you will not need password to log into the ```ip``` system.   
 
 
 ### Zsh
@@ -262,3 +271,6 @@ explainshell.com will change your life if you just copy a complex shell command 
 - ctrl+shift+L will select all occurence of some text.
 - Alt+ click will give you another cursor.
 
+#### Volatility installation and troubleshooting
+
+- Error while running vol : ```ModuleNotFoundError: No module named '_lzma'```
