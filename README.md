@@ -250,6 +250,8 @@ I have file named *.img genrated from compilation for rpi3. How do I see what is
     -drive file=ubuntu.qcow2,media=disk,if=virtio \
     -cdrom name_of_the_distro_image.iso \``
 
+- sudo apt-get install qemu-kvm libvirt-clients libvirt-daemon-system virtinst bridge-utils
+- 
 
 
 ### email inbox cleaning
@@ -274,3 +276,11 @@ explainshell.com will change your life if you just copy a complex shell command 
 #### Volatility installation and troubleshooting
 
 - Error while running vol : ```ModuleNotFoundError: No module named '_lzma'```
+
+### ECE Server access 
+- The machine is in USERNAME@ssh.ece.vt.edu
+- The user name is case sensitive.
+
+### Vivado does not install and hangs in Ubunutu.
+
+-- Most likely these libraries are the problem: https://support.xilinx.com/s/article/76616?language=en_US
