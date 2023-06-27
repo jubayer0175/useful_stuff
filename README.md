@@ -52,7 +52,8 @@ This should get you an ip and if you do ```apt-get install ubuntu-desktop```, mo
 - sudo apt install openssh-server
 - sudo systemctl status ssh
 - list ssh keys in you local computer: ```ls -al ~/.ssh/id_*.pub```
-- Transfer the key to remote machine:  ```ssh-copy-id user@ip-address```. from now on you will not need password to log into the ```ip``` system.   
+- Transfer the key to remote machine:  ```ssh-copy-id user@ip-address```. from now on you will not need password to log into the ```ip``` system.
+- ```ssh-add ~/.ssh/id_<> ``` add key to the ssh-agent
 
 
 ### Zsh
@@ -192,6 +193,7 @@ I have file named *.img genrated from compilation for rpi3. How do I see what is
 ### setup vim env
 
 - sudo apt-get update && sudo apt-get install -y curl git gnupg htop  jq  pass  pwgen  python3-pip  ripgrep  rsync  shellcheck  tmux   unzip vim-gtk
+- I am an idiot and I pressed ctrl+s in vim. How to get out> ctrl+q
 
 
 
