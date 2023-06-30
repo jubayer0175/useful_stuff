@@ -286,3 +286,19 @@ explainshell.com will change your life if you just copy a complex shell command 
 ### Vivado does not install and hangs in Ubunutu.
 
 -- Most likely these libraries are the problem: https://support.xilinx.com/s/article/76616?language=en_US
+
+
+
+## install VS code in Centos
+- sudo vim /etc/yum.repos.d/vscode.repo 
+- copy ```
+[vscode]
+name=Visual Studio Code
+baseurl=https://packages.microsoft.com/yumrepos/vscode
+enabled=1
+gpgcheck=1
+gpgkey=https://packages.microsoft.com/keys/microsoft.asc
+```
+
+- sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc 
+- sudo yum install code 

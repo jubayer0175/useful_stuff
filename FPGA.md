@@ -11,6 +11,8 @@ If the clocks are driven from MMCM/PLL, ensure that the MMCM/PLL LOCKED signal i
 - Install aws cli if you want to (recomended) "curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip" \
 && unzip awscliv2.zip \
 && sudo ./aws/install"
+- Xilinx docs seems to be nicer than aws docs: https://github.com/Xilinx/SDAccel-Tutorials/tree/master/docs/aws-getting-started/PREREQUISITES 
+- Double word is 4 byte in AWS CL and SH :p
 
 -- Now dive in this documents if you have time. I am going to ssh into the machines for now.
 -- Python needs update in the FPGA AMI. 
@@ -25,3 +27,20 @@ aws ec2 create-fpga-image --region us-east-1 --input Bucket=forte-research,Key=h
     "FpgaImageGlobalId": "agfi-06211ecf7e88a11d0"
 
 aws ec2 describe-fpga-images --fpga-image-ids afi-09e0f593c5933a119
+
+
+--
+-- Supre like this by swapped subroutine: 
+uint32_t byte_swap(uint32_t value) {
+    uint32_t swapped_value = 0;
+    int b;
+    for (b = 0; b < 4; b++) {
+        swapped_value |= ((value >> (b * 8)) & 0xff) << (8 * (3-b));
+    }
+    return swapped_value;
+}
+
+-- disable encrypt.tcl file in the build directory this will allow you to look at bugs in the design during synthesis. Also, if new file added, you must add the file in the encrypt.tcl otherwise, you will get build error as the files will not be found during the runs.
+
+## AWS s3 commands
+- Help: https://docs.aws.amazon.com/cli/latest/userguide/cli-services-s3-commands.html
