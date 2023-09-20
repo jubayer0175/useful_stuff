@@ -1,0 +1,26 @@
+#-----------------------------------------------------------
+# Vivado v2023.1 (64-bit)
+# SW Build 3865809 on Sun May  7 15:04:56 MDT 2023
+# IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
+# SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+# Start of session at: Thu Aug 24 12:59:40 2023
+# Process ID: 955693
+# Current directory: /home/jubayer/useful_stuff
+# Command line: vivado -mode gui
+# Log file: /home/jubayer/useful_stuff/vivado.log
+# Journal file: /home/jubayer/useful_stuff/vivado.jou
+# Running On: Striped-Cat, OS: Linux, CPU Frequency: 1300.002 MHz, CPU Physical cores: 6, Host memory: 67106 MB
+#-----------------------------------------------------------
+start_gui
+open_checkpoint /home/jubayer/Downloads/23_08_24-051003.CL.post_synth.dcp
+open_checkpoint /home/jubayer/Downloads/23_08_24-175818.SH_CL_routed.dcp
+current_project project_23_08_24-051003.CL.post_synth
+close_design
+report_route_status
+WRAPPER_INST/CL/mycomb/mmcm_cntrl_inst/CLK0OUT
+get_nets [WRAPPER_INST/CL/mycomb/mmcm_cntrl_inst/CLK0OUT]
+BUFGCE_X1Y181
+report_unrouted
+startgroup
+route_design -nets [get_nets { WRAPPER_INST/CL/mycomb/mmcm_cntrl_inst/CLK0OUT }]
+write_schematic -format pdf -orientation portrait /home/jubayer/Downloads/schematic.pdf

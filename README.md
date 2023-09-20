@@ -298,7 +298,84 @@ baseurl=https://packages.microsoft.com/yumrepos/vscode
 enabled=1
 gpgcheck=1
 gpgkey=https://packages.microsoft.com/keys/microsoft.asc
-```
+
 
 - sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc 
 - sudo yum install code 
+
+
+
+
+
+ 🎨 Matplotlib Font Changing - Debian System
+ ====================
+
+### 📦 Install Microsoft Core Fonts
+
+```bash
+sudo apt-get --reinstall install ttf-mscorefonts-installer
+```
+
+### 📂 Create a Fonts Directory (if it doesn't exist)
+
+```bash
+mkdir ~/.fonts
+```
+
+### 📄 Copy Times New Roman Font to Your Fonts Directory
+
+```bash
+cp /usr/share/fonts/truetype/msttcorefonts/Times_New_Roman.ttf ~/.fonts/
+```
+
+### 🔄 Rebuild the Font Cache
+
+```bash
+fc-cache -f -v
+```
+
+### 🔄 Restart Your Python Environment
+
+- Remove the cache files from this directory: `~/.cache/matplotlib/`
+
+### 🐍 Python Code to Explicitly Use the Font
+
+If your Python environment still cannot recognize the font, you can specify it explicitly in your code:
+
+```python
+from matplotlib import font_manager
+
+font_path = '/usr/share/fonts/truetype/msttcorefonts/Times_New_Roman.ttf'
+font_properties = font_manager.FontProperties(fname=font_path)
+
+# Define font properties
+font = {'family': 'Times New Roman',
+        'weight': 'bold',
+        'size': 10}
+
+# Apply font settings
+matplotlib.rc('font', **font)
+
+# Create a plot
+fig, ax = plt.subplots()
+data = [------------------]
+ax.plot(data)
+
+# Customize plot
+ax.set_xlabel('cool stuffs', **font)
+ax.set_ylabel('more cool stuffs', **font)
+ax.spines['left'].set_visible(True)
+ax.spines["left"].set_color("black")
+ax.spines['top'].set_visible(True)
+ax.spines["top"].set_color("black")
+ax.spines['bottom'].set_visible(True)
+ax.spines["bottom"].set_color("black")
+ax.yaxis.tick_left()
+ax.xaxis.tick_bottom()
+
+# Save the plot
+plt.savefig(f'../graphs/file.pdf', transparent=True)
+```
+
+---
+
