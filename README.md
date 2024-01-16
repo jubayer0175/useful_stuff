@@ -1,8 +1,8 @@
-This repo has bunch tools/command etc to get me started in many things. 
+This repo has bunch tools/commands etc to get me started in many things. 
 
 ### System issues (Somthing that I learned the hard way)
 #### Deleted phython and now the ubunutu desktop is broken
--- Go into ubuntu recovery mode: keep shift key untill you enter Grub menu during system boot. Then go to root shell which most likely is password protected so you gotta figure that you. 
+-- Go into ubuntu recovery mode: keep shift key untill you enter Grub menu during system boot. Then go to root shell which most likely is password protected so you gotta figure that out (Most CMOS battery is one way to bypas that.) 
 -- Then see if network is; ping google. Most likely network is not running so we need to get that started. 
 --  In the root shell type: ```ifconfig <interface> up```, here interface name is the ethernet port name. You can do wifi too if you have one. Then, ```dhclient <interface>```
 This should get you an ip and if you do ```apt-get install ubuntu-desktop```, most likely it will fix the damage done due to python purging.
