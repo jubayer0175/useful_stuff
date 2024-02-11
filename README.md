@@ -3,7 +3,7 @@ This repo has bunch tools/commands etc to get me started in many things.
 ### System issues (Somthing that I learned the hard way)
 
 #### VS code does not connect to the remote machine
-- This is a likely case now if you are trying to connect to the a CentOS =<7. Use Alpine build of the CLI (VS code insiders) to avoid problems in ssh connection. AWS F1 image is CentOS7. even freaking ECE server is CentOS 7!
+- This is a likely case now if you are trying to connect to a CentOS <=7 machine. Use Alpine build of the CLI (VS code insiders) to avoid problems in an ssh connection. AWS F1 image is CentOS7. even freaking ECE server is CentOS 7!
 
 #### Deleted phython and now the ubunutu desktop is broken
 -- Go into ubuntu recovery mode: keep shift key untill you enter Grub menu during system boot. Then go to root shell which most likely is password protected so you gotta figure that out (Most CMOS battery is one way to bypas that.) 
